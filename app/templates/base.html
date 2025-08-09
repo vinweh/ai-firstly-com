@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ title or "App" }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', path='/css/app.css') }}">
+  <!-- Optional HTMX sprinkles later: <script src="https://unpkg.com/htmx.org"></script> -->
+</head>
+<body>
+  <header>
+    <nav><a href="/">Home</a> · <a href="/about">About</a></nav>
+  </header>
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+</body>
+</html>
